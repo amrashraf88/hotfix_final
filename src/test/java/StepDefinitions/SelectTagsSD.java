@@ -15,7 +15,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static StepDefinitions.Hooks.driver;
+import static StepDefinitions.Home.Hooks.driver;
 
 
 public class SelectTagsSD {

@@ -62,7 +62,7 @@ public class checkoutpage {
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[2]/div/div/div/div[2]/button"));
     }
     public WebElement choose_payment(){
-        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[1]/div/div/div/mat-radio-group/mat-radio-button[1]/label/span[2]"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[1]/div/div/div/mat-radio-group/mat-radio-button/label/span[2]/span[3]"));
     }
     public WebElement agree_team_condetion(){
         return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/app-payment/div/div/div/div/div/div[1]/mat-accordion/form/mat-expansion-panel[3]/div/div/div/div[5]/mat-checkbox/label"));

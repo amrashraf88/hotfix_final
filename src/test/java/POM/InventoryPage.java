@@ -40,9 +40,11 @@ public  WebElement mapSave(){
         return driver.findElement(By.xpath("/html/body/app-root/div[2]/div/div[3]/button"));
 }
 public WebElement invventory_icon(){
-        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[4]/div[1]/span[2]/app-source-icons/div/button/span[1]/mat-icon"));
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[3]/div[1]/span[2]/app-source-icons/div/button/span[1]/mat-icon"));
 }
-
+public WebElement zoom_button(){
+        return driver.findElement(By.xpath("/html/body/app-root/div[2]/app-multi-invintory-area/div/div/div[2]/agm-map/div[1]/div/div/div[13]/div/div[2]/div/button[1]"));
+}
 public WebElement inventory_page(){
         return driver.findElement(By.xpath("/html/body/app-root/div[2]/div"));
 

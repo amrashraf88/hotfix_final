@@ -50,13 +50,13 @@ public class LoginPage {
     }
     public void userName() throws FileNotFoundException {
 
-        File emailFile = new File("/home/amr/Downloads/hotfix_final/fileName2.txt");
+        File emailFile = new File("fileName2.txt");
         Scanner emailScanner = new Scanner(emailFile);
         String email = emailScanner.nextLine();
         emailScanner.close();
 
 // Read phone from phone.txt
-        File phoneFile = new File("/home/amr/Downloads/hotfix_final/fileName.txt");
+        File phoneFile = new File("fileName.txt");
         Scanner phoneScanner = new Scanner(phoneFile);
         String phone = phoneScanner.nextLine();
         phoneScanner.close();
@@ -126,7 +126,22 @@ public class LoginPage {
     {
         return driver.findElement(By.xpath("//*[@id=\"en\"]/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[3]/a"));
     }
-
-
-
+    public WebElement emailValidation(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div/mat-error"));
+    }
+    public WebElement passwordValidation(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[2]/mat-form-field/div/div[3]/div/mat-error"));
+    }
+    public WebElement wrongpasswordLenght(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[2]/mat-form-field/div/div[3]/div/mat-error"));
+    }
+    public WebElement wrongEmail(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div/mat-error"));
+    }
+    public WebElement phonelenght(){
+            return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div"));
+    }
+    public WebElement validationphone(){
+        return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div/mat-error"));
+    }
 }

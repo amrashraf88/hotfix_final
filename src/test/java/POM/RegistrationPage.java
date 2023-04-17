@@ -41,5 +41,31 @@ public class RegistrationPage {
 	public WebElement registerButton() {
 		return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div[1]/embryo-register/div/div/div/div/div/div[2]/mat-card/form/button"));
 	}
+	public WebElement firstNameValidation(){
+		return driver.findElement(By.xpath("//div[@class=\"ng-tns-c74-26 ng-trigger ng-trigger-transitionMessages ng-star-inserted\"]"));
+	}
+
+	public WebElement lastNameValidation(){
+		return driver.findElement(By.xpath("//div[@class=\"ng-tns-c74-27 ng-trigger ng-trigger-transitionMessages ng-star-inserted\"]"));
+	}
+	public WebElement emailValidation(){
+		return driver.findElement(By.xpath("//div[@class=\"ng-tns-c74-28 ng-trigger ng-trigger-transitionMessages ng-star-inserted\"]"));
+	}
+	public WebElement phoneValidation(){
+		return driver.findElement(By.xpath("//div[@class=\"ng-tns-c74-29 ng-trigger ng-trigger-transitionMessages ng-star-inserted\"]"));
+	}
+	public WebElement passwordValidation(){
+		return driver.findElement(By.xpath("//div[@class=\"ng-tns-c74-31 ng-trigger ng-trigger-transitionMessages ng-star-inserted\"]"));
+	}
+	public WebElement confirmPasswordValidation(){
+		return driver.findElement(By.xpath("//div[@class=\"ng-tns-c74-32 ng-trigger ng-trigger-transitionMessages ng-star-inserted\"]"));
+	}
+	public WebElement checkemail(){
+		return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/embryo-register/div/div/div/div/div/div[2]/mat-card/form/div[1]/mat-form-field[3]/div/div[3]/div/mat-error"));
+
+	}
+	public WebElement checkphone(){
+		return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/embryo-register/div/div/div/div/div/div[2]/mat-card/form/div[1]/mat-form-field[4]/div/div[3]/div/mat-error"));
+	}
 
 }

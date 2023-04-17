@@ -12,12 +12,12 @@ import org.junit.runner.RunWith;
         tags = "@Regression",
         plugin = {
            "pretty",
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-//                "html:target/cucumber.html",
-//                "json:target/cucumber.json",
-//                "junit:target/cukes.xml",
-//                "rerun:target/rerun.txt"
-        }
+            "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "html:target/cucumber.html",
+                "json:target/cucumber.json",
+                "junit:target/cukes.xml",
+                "rerun:target/rerun.txt"
+       }
 )
 
 public class TestRunner{

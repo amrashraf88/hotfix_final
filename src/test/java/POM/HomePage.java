@@ -54,7 +54,7 @@ String nphone;
     //locate Login Button
     public WebElement login()
     {
-        return driver.findElement(By.xpath("//*[@id=\"signIn\"]/button/span[1]/mat-icon"));
+        return driver.findElement(By.id("signIn"));
     }
     public WebElement accept_coocks()
     {
@@ -124,7 +124,7 @@ String nphone;
                 return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[4]/div/app-wallet-list-menu/button/span[1]/mat-icon"));
         }
         public WebElement point(){
-                return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[4]/div/app-stars-list-menu/button/span[1]/mat-icon"));
+                return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[3]/div[2]/app-stars-list-menu/button/span[1]"));
         }
         public WebElement notifacation(){
                 return driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/headertwo/mat-toolbar/mat-toolbar-row[2]/div/div/div[4]/div/app-notification-list-menu/button/span[1]/mat-icon"));
