@@ -1,9 +1,10 @@
 
 package StepDefinitions.Login;
 
+import POM.Api;
 import POM.HomePage;
 import POM.LoginPage;
-
+import POM.Respponsive;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,11 +13,15 @@ import io.restassured.http.ContentType;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import java.io.*;
 
+import java.time.Duration;
 import java.util.Scanner;
 
 import static StepDefinitions.Home.Hooks.driver;
@@ -25,13 +30,19 @@ import static io.restassured.RestAssured.given;
 
 public class LoginGmailStepDefienetion   {
 
-
+    Respponsive respponsive = new Respponsive();
     HomePage home = new HomePage(driver);
     LoginPage login = new LoginPage(driver);
-
+    Api api = new Api();
 
     @Given("user to login page GM1")
     public void openLoginPageGM() throws InterruptedException {
+
+
+
+    api.setpranch();
+driver.navigate().refresh();
+
 
         Thread.sleep(3000);
         home.login().click();

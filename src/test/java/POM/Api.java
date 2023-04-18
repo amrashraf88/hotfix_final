@@ -1,19 +1,48 @@
 package POM;
 
+import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import static StepDefinitions.Home.Hooks.driver;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class Api {
     static String messagedeactive;
+    public String getValueFromResponse(Response response, String ValueToValidate) {
+        JsonPath path = response.jsonPath();
+        return path.get(ValueToValidate).toString();
+    }
+    public void setpranch(){
 
+        String token = (String) ((JavascriptExecutor) driver).executeScript("return localStorage.getItem('auth_token')");
+        System.out.println(token);
+
+        int branchId = 2;
+  String message =  given()
+            .baseUri("https://shopapi.witheldokan.com")
+            .basePath("/api/customer/profile/set-branch")
+            .contentType(ContentType.JSON)
+            .header("Authorization", "Bearer " + token)
+
+          .body("{\"branch_id\":\"" + branchId + "\"}")
+            .post()
+            .then()
+            .statusCode(200)
+            .extract()
+            .path("message");
+        System.out.println("message: " + message);
+
+    }
     public void deactivedaccountFOREMAIL() {
         int id = given()
                 .baseUri("https://shopapi.witheldokan.com")
