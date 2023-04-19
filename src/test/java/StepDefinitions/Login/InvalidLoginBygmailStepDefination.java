@@ -1,23 +1,28 @@
 package StepDefinitions.Login;
-        import POM.HomePage;
-        import POM.LoginPage;
-        import io.cucumber.java.en.And;
-        import io.cucumber.java.en.Given;
-        import io.cucumber.java.en.Then;
-        import io.cucumber.java.en.When;
-        import io.restassured.http.ContentType;
-        import org.junit.Assert;
-        import org.openqa.selenium.By;
-        import org.openqa.selenium.WebElement;
-        import java.io.*;
-        import java.util.Scanner;
-        import static StepDefinitions.Home.Hooks.driver;
 
-        import static io.restassured.RestAssured.given;
-        import static org.hamcrest.CoreMatchers.equalTo;
+import POM.HomePage;
+import POM.LoginPage;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.io.*;
+import java.util.Scanner;
+
+import static StepDefinitions.Home.Hooks.driver;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 
-public class InvalidLoginBygmailStepDefination  {
+public class InvalidLoginBygmailStepDefination {
 
 
     HomePage home = new HomePage(driver);
@@ -36,6 +41,7 @@ public class InvalidLoginBygmailStepDefination  {
         Thread.sleep(3000);
 
     }
+
     public static void openemail() {
         String token1 = given()
                 .baseUri("https://shopapi.witheldokan.com")
@@ -93,16 +99,17 @@ public class InvalidLoginBygmailStepDefination  {
 
                 if (phoneInput.isDisplayed()) {
                     // Element is displayed, send phone number
-                    user_name.sendKeys(phone);}
+                    user_name.sendKeys(phone);
+                }
             } catch (Exception e) {
                 user_name.click();
                 user_name.sendKeys(email);
             }
-        }else {   WebElement emailInput = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/span/label/span"));
+        } else {
+            WebElement emailInput = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/span/label/span"));
             emailInput.sendKeys(email);
         }
     }
-
 
 
     @And("user enter invalid password IN GM\"(.*)\"$")
@@ -114,11 +121,13 @@ public class InvalidLoginBygmailStepDefination  {
     public void clickLoginButtonInGN() {
         login.loginButton().click();
     }
-    @And ("user click on profile IN GN")
+
+    @And("user click on profile IN GN")
     public void clickaccountbuttonINGN() throws InterruptedException {
         Thread.sleep(2000);
         home.profile().click();
     }
+
     @Then("user could validate that password required IN GN")
     public void passwordvalidateGN() throws InterruptedException {
 
@@ -128,6 +137,7 @@ public class InvalidLoginBygmailStepDefination  {
         Assert.assertTrue(actualResult.contains(expectedResult));
 
     }
+
     @Then("user could validate that email required IN GN")
     public void EmailvalidateGN() throws InterruptedException {
 
@@ -137,6 +147,7 @@ public class InvalidLoginBygmailStepDefination  {
         Assert.assertTrue(actualResult.contains(expectedResult));
 
     }
+
     @Then("user could validate that email IN GN")
     public void Wrongemail() throws InterruptedException {
 
@@ -146,6 +157,7 @@ public class InvalidLoginBygmailStepDefination  {
         Assert.assertTrue(actualResult.contains(expectedResult));
 
     }
+
     @Then("user could validate that password lenght IN GN")
     public void passwordlenghtGN() throws InterruptedException {
 
@@ -153,6 +165,27 @@ public class InvalidLoginBygmailStepDefination  {
         String expectedResult = "Password isn't long enough, minimum of 8 characters";
         String actualResult = login.wrongpasswordLenght().getText();
         Assert.assertTrue(actualResult.contains(expectedResult));
+
+    }
+
+    @Then("user couldnot login successfully and redirected to home page GM\"(.*)\"$")
+    public void invalidemailforauth(String email) throws InterruptedException {
+        System.out.println(email);
+        String message = given()
+                .baseUri("https://shopapi.witheldokan.com")
+                .basePath("/api/customer/auth")
+                .contentType(ContentType.JSON)
+                .body("{ \"email\": \"" + email + "\", \"password\": \"12345678\"}")
+                .post()
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("message");
+        String expectedResult = "Password or email are incorrect, kindly check them again.";
+        String actualResult = message ;
+        Assert.assertTrue(actualResult.contains(expectedResult));
+        System.out.println("message: " + message);
+
 
     }
 

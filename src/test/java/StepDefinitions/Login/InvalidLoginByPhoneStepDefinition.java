@@ -66,7 +66,7 @@ public class InvalidLoginByPhoneStepDefinition   {
 				WebElement phoneInput = driver.findElement(By.xpath("/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[1]/div/span[2]/label"));
 
 				if (phoneInput.isDisplayed()) {
-					user_name.sendKeys(phone);
+					user_name.sendKeys(username);
 				}
 			} catch (Exception e) {
 				user_name.click();
@@ -110,8 +110,9 @@ public class InvalidLoginByPhoneStepDefinition   {
 	@Then("user could validate that phone length IN PH")
 	public void PHonevalidatePH() throws InterruptedException {
 		Thread.sleep(2000);
-		String expectedResult = " Phone number must be 9 digits  ";
+		String expectedResult = "Phone number must be 9 digits";
 		String actualResult = login.phonelenght().getText();
+		System.out.println(actualResult);
 		Assert.assertTrue(actualResult.contains(expectedResult));
 
 	}

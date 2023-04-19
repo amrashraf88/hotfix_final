@@ -28,7 +28,7 @@ import static StepDefinitions.Home.Hooks.driver;
 import static io.restassured.RestAssured.given;
 
 
-public class LoginGmailStepDefienetion   {
+public class LoginGmailStepDefienetion {
 
     Respponsive respponsive = new Respponsive();
     HomePage home = new HomePage(driver);
@@ -39,45 +39,20 @@ public class LoginGmailStepDefienetion   {
     public void openLoginPageGM() throws InterruptedException {
 
 
+//        api.setpranch();
+//        driver.navigate().refresh();
 
-    api.setpranch();
-driver.navigate().refresh();
 
-
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         home.login().click();
-        openGmail();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+        api.openGmail();
+        Thread.sleep(2000);
         driver.navigate().refresh();
         Thread.sleep(2000);
     }
-    public static void openGmail() {
-        String token1 = given()
-                .baseUri("https://shopapi.witheldokan.com")
-                .basePath("/api/admin/auth")
-                .contentType(ContentType.JSON)
-                .body("{ \"email\": \"admin@el-dokan.com\", \"password\": \"12345678\" }")
-                .post()
-                .then()
-                .statusCode(200)
-
-                .extract()
-
-                .path("data.token");
-
-        System.out.println("Token: " + token1);
-        given()
-                .baseUri("https://shopapi.witheldokan.com")
-                .basePath("/api/admin/configurations/manager/update")
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + token1)
-                .body("{ \"configs\": [ { \"id\": 359, \"value\": \"https://api.whatsapp.com/send/?phone=xxxxxx\" }, { \"id\": 181, \"value\": false } ] }")
-                .post()
-                .then()
-                .statusCode(200);
 
 
-    }
 
     @And("user accept cookies GM")
     public void accept_cookieGM() throws InterruptedException {

@@ -1,4 +1,1 @@
-file:src/main/resources/Features/Inventory%20Senario/SC13_Inventory.feature:4
-file:src/main/resources/Features/Compare%20Senario%20/SC11_AddToCompare.feature:4
-file:src/main/resources/Features/Login%20Senario/SC017_InvalidPhoneForLogin.feature:27:39
-file:src/main/resources/Features/Register%20Senario/SC020_RegisterInvalidData.feature:36
+file:src/main/resources/Features/Login%20Senario/SC05_InvalidLoginByPhone.feature:39

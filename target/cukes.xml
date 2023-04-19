@@ -1,106 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="24" time="672.539">
-    <testcase classname="verify cart functionality" name="Logged user could add different products to Shopping cart" time="30.243">
-        <system-out><![CDATA[Given user logged in to add product to cart.................................passed
-When user choose category...................................................passed
-And user add product to cart................................................passed
-Then product should be added successfully to cart...........................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="471.127">
+    <testcase classname="Verify login Functionality" name="User could log in with valid email and password" time="51.672">
+        <system-out><![CDATA[Given user to login page GM1................................................passed
+And user accept cookies GM..................................................passed
+When user enter valid gmail GM"test.test@test.com"..........................passed
+And user enter valid password GM"12345678"..................................passed
+And user click on login GM..................................................passed
+And user click on profile GM................................................passed
+Then user could login successfully and redirected to home page GM...........passed
 ]]></system-out>
     </testcase>
-    <testcase classname="point" name="user add address" time="30.638">
-        <system-out><![CDATA[Given user login for address................................................passed
-When user navigate to profile...............................................passed
-And user navigate to address page...........................................passed
-And user add fill all field.................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify compare list functionality" name="Logged user could add different products to compare list" time="12.444">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[2]/mat-form-field/div/div[1]/div[1]/input&quot;}&#10;  (Session info: chrome=110.0.5481.77)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '19.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [8dba02a398de80538dd06aa79fe164eb, findElement {using=xpath, value=/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[2]/mat-form-field/div/div[1]/div[1]/input}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.6C9sim}, goog:chromeOptions: {debuggerAddress: localhost:39621}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39621/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 8dba02a398de80538dd06aa79fe164eb" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user logged in to add product to compare list.........................failed
-When user select specific category..........................................skipped
-And user add product to compare list........................................skipped
-Then the product should added to compare list successfully..................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[2]/mat-form-field/div/div[1]/div[1]/input"}
-  (Session info: chrome=110.0.5481.77)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8dba02a398de80538dd06aa79fe164eb, findElement {using=xpath, value=/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[2]/mat-form-field/div/div[1]/div[1]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.6C9sim}, goog:chromeOptions: {debuggerAddress: localhost:39621}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:39621/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8dba02a398de80538dd06aa79fe164eb
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at POM.LoginPage.password(LoginPage.java:117)
-	at StepDefinitions.Compare.CompareStepDefinition.loggedUser(CompareStepDefinition.java:26)
-	at ✽.user logged in to add product to compare list(file:///home/amr/Downloads/hotfix_final-main/src/main/resources/Features/Compare%20Senario%20/SC11_AddToCompare.feature:5)
-]]></failure>
-    </testcase>
-    <testcase classname="verify wishlist functionality" name="Logged user could add different products to Wishlist" time="30.055">
-        <system-out><![CDATA[Given user logged in to add product to wishlist.............................passed
-When user select any category...............................................passed
-And user add product to wishlist............................................passed
-Then product should add to wishlist successfully............................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify filtration functionality" name="Logged user could filter with color" time="23.972">
-        <system-out><![CDATA[Given user is logged in to filter...........................................passed
-When user select category...................................................passed
-And user filter by color....................................................passed
-Then products with this attribute should be displayed.......................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify Inventory functionality" name="User could select from inventory popup" time="28.171">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/div[2]/div/div[3]/button&quot;}&#10;  (Session info: chrome=110.0.5481.77)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '19.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [e3bb0d67a64e7f771145c783fa70f5d4, findElement {using=xpath, value=/html/body/app-root/div[2]/div/div[3]/button}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.3CFwfQ}, goog:chromeOptions: {debuggerAddress: localhost:33153}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33153/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: e3bb0d67a64e7f771145c783fa70f5d4" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user select pickup....................................................passed
-And user select store.......................................................passed
-And user save store.........................................................passed
-And user click in inventory.................................................passed
-And user choose map.........................................................passed
-Then user save his current location.........................................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/div[2]/div/div[3]/button"}
-  (Session info: chrome=110.0.5481.77)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e3bb0d67a64e7f771145c783fa70f5d4, findElement {using=xpath, value=/html/body/app-root/div[2]/div/div[3]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.3CFwfQ}, goog:chromeOptions: {debuggerAddress: localhost:33153}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33153/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e3bb0d67a64e7f771145c783fa70f5d4
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at POM.InventoryPage.mapSave(InventoryPage.java:40)
-	at StepDefinitions.Inventory.InventoryStepDefinition.save_map(InventoryStepDefinition.java:65)
-	at ✽.user save his current location(file:///home/amr/Downloads/hotfix_final-main/src/main/resources/Features/Inventory%20Senario/SC13_Inventory.feature:11)
-]]></failure>
-    </testcase>
-    <testcase classname="Verify login with phone Functionality" name="User could log in with valid phone and password" time="31.559">
+    <testcase classname="Verify login with phone Functionality" name="User could log in with valid phone and password" time="46.63">
         <system-out><![CDATA[Given user to login page PH.................................................passed
 And user accept cookies PH..................................................passed
 When user enter valid Phone PH"010345234"...................................passed
@@ -110,7 +20,35 @@ And user click on profile PH................................................pass
 Then user could login successfully and redirected to home page PH...........passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid  password" time="27">
+    <testcase classname="Verify user couldn't login without valid data Functionality for gmail" name="User couldn't log in with invalid  password for email configuration" time="43.96">
+        <system-out><![CDATA[Given user to login page IN GM..............................................passed
+And user accept cookies IN GM...............................................passed
+When user enter invalid email IN GM"test.test@test.com".....................passed
+And user enter invalid password IN GM"1234".................................passed
+And user click on login IN GN...............................................passed
+Then user could validate that password lenght IN GN.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify user couldn't login without valid data Functionality for gmail" name="User couldn't log in with invalid email" time="42.148">
+        <system-out><![CDATA[Given user to login page IN GM..............................................passed
+And user accept cookies IN GM...............................................passed
+When user enter invalid email IN GM"test.test@tesmt.com"....................passed
+And user enter invalid password IN GM"12345678".............................passed
+And user click on login IN GN...............................................passed
+Then user couldnot login successfully and redirected to home page GM"test.test@tesmt.com".passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify user couldn't login without valid data Functionality for gmail" name="User couldn't log in with invalid email and password" time="46.112">
+        <system-out><![CDATA[Given user to login page IN GM..............................................passed
+And user accept cookies IN GM...............................................passed
+When user enter invalid email IN GM"".......................................passed
+And user enter invalid password IN GM"".....................................passed
+And user click on login IN GN...............................................passed
+Then user could validate that email required IN GN..........................passed
+Then user could validate that password required IN GN.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid  password" time="44.27">
         <system-out><![CDATA[Given user to login page IN PH..............................................passed
 And user accept cookies IN PH...............................................passed
 When user enter invalid phone IN PH"010623883"..............................passed
@@ -119,44 +57,16 @@ And user click on login IN PH...............................................pass
 Then user could validate that password length IN GN.........................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid phone" time="28.162">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div&quot;}&#10;  (Session info: chrome=110.0.5481.77)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '19.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [bc15a47e1d83a61d516a95ccad342cc9, findElement {using=xpath, value=/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.ikuoN6}, goog:chromeOptions: {debuggerAddress: localhost:41921}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41921/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: bc15a47e1d83a61d516a95ccad342cc9" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user to login page IN PH..............................................passed
+    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid phone" time="47.348">
+        <system-out><![CDATA[Given user to login page IN PH..............................................passed
 And user accept cookies IN PH...............................................passed
 When user enter invalid phone IN PH"01062388"...............................passed
 And user enter invalid password IN PH"12345678".............................passed
 And user click on login IN PH...............................................passed
-Then user could validate that phone length IN PH............................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div"}
-  (Session info: chrome=110.0.5481.77)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.0.0-kali3-amd64', java.version: '19.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc15a47e1d83a61d516a95ccad342cc9, findElement {using=xpath, value=/html/body/app-root/div/mat-sidenav-container/mat-sidenav-content/div/signin/div/div/div/div/div/div[2]/mat-card/embryo-signin/form/div[1]/mat-form-field/div/div[3]/div}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.ikuoN6}, goog:chromeOptions: {debuggerAddress: localhost:41921}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41921/devtoo..., se:cdpVersion: 110.0.5481.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bc15a47e1d83a61d516a95ccad342cc9
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-	at POM.LoginPage.phonelenght(LoginPage.java:142)
-	at StepDefinitions.Login.InvalidLoginByPhoneStepDefinition.PHonevalidatePH(InvalidLoginByPhoneStepDefinition.java:138)
-	at ✽.user could validate that phone length IN PH(file:///home/amr/Downloads/hotfix_final-main/src/main/resources/Features/Login%20Senario/SC017_InvalidPhoneForLogin.feature:24)
-]]></failure>
+Then user could validate that phone length IN PH............................passed
+]]></system-out>
     </testcase>
-    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid email and password" time="27.724">
+    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid email and password" time="45.115">
         <failure message="" type="java.lang.AssertionError"><![CDATA[Given user to login page PH.................................................passed
 And user accept cookies PH..................................................passed
 When user enter invalid phone IN PH"".......................................passed
@@ -169,157 +79,25 @@ java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
-	at StepDefinitions.Login.InvalidLoginByPhoneStepDefinition.passwordvalidatePH(InvalidLoginByPhoneStepDefinition.java:166)
-	at ✽.user could validate that password required IN PH(file:///home/amr/Downloads/hotfix_final-main/src/main/resources/Features/Login%20Senario/SC017_InvalidPhoneForLogin.feature:36)
+	at StepDefinitions.Login.InvalidLoginByPhoneStepDefinition.passwordvalidatePH(InvalidLoginByPhoneStepDefinition.java:143)
+	at ✽.user could validate that password required IN PH(file:///Users/amrashraf/IdeaProjects/hotfix_final_main/src/main/resources/Features/Login%20Senario/SC05_InvalidLoginByPhone.feature:36)
 ]]></failure>
     </testcase>
-    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid  password for email configration" time="29.103">
-        <system-out><![CDATA[Given user to login page IN GM..............................................passed
-And user accept cookies IN GM...............................................passed
-When user enter invalid email IN GM"Test.test.test@test.test"...............passed
-And user enter invalid password IN GM"1234".................................passed
-And user click on login IN GN...............................................passed
-Then user could validate that password lenght IN GN.........................passed
+    <testcase classname="Verify login Functionality" name="User could log in with valid email and password" time="50.103">
+        <system-out><![CDATA[Given user to login page DE GM..............................................passed
+And user accept cookies DE GM...............................................passed
+When user enter invalid email DE GM"test.test@test.com".....................passed
+And user enter invalid password DE GM"12345678".............................passed
+And user click on login DE GN...............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid email" time="27.093">
-        <system-out><![CDATA[Given user to login page IN GM..............................................passed
-And user accept cookies IN GM...............................................passed
-When user enter invalid email IN GM"Test.test.test@test.tes"................passed
-And user enter invalid password IN GM"12345678".............................passed
-And user click on login IN GN...............................................passed
-Then user couldnot login successfully and redirected to home page GM........passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Verify user couldn't login without valid data Functionality" name="User couldn't log in with invalid email and password" time="29.726">
-        <system-out><![CDATA[Given user to login page IN GM..............................................passed
-And user accept cookies IN GM...............................................passed
-When user enter invalid email IN GM"".......................................passed
-And user enter invalid password IN GM"".....................................passed
-And user click on login IN GN...............................................passed
-Then user could validate that email required IN GN..........................passed
-Then user could validate that password required IN GN.......................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Verify login Functionality" name="User could log in with valid email and password" time="30.848">
-        <system-out><![CDATA[Given user to login page GM1................................................passed
-And user accept cookies GM..................................................passed
-When user enter valid gmail GM"Test.test.test@test.test"....................passed
-And user enter valid password GM"12345678"..................................passed
-And user click on login GM..................................................passed
-And user click on profile GM................................................passed
-Then user could login successfully and redirected to home page GM...........passed
-]]></system-out>
-    </testcase>
-    <testcase classname="point" name="user use point" time="21.618">
-        <system-out><![CDATA[Given user navigate to openpointpagforuser page.............................passed
-When user navigate to point.................................................passed
-And user check voucher......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify register functionality" name="User could validate that register field in required" time="38.185">
-        <system-out><![CDATA[Given user navigate to registration page IN.................................passed
-When user enter first name IN ""............................................passed
-And user enter last name IN ""..............................................passed
-And user enter email IN ""..................................................passed
-And user enter phone IN ""..................................................passed
-And user enter password IN ""...............................................passed
-And user confirm password IN "".............................................passed
-Then user could register successfully.......................................passed
-Then user could validate that first name required...........................passed
-Then user could validate that last name required IN.........................passed
-Then user could validate that email required................................passed
-Then user could validate that phone required................................passed
-Then user could validate that password required.............................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify register functionality" name="User could register with valid data" time="29.684">
-        <system-out><![CDATA[Given user navigate to registration page....................................passed
-When user enter first name..................................................passed
-And user enter last name....................................................passed
-And user enter email"test.test@test.com"....................................passed
-And user enter phone"01062388340"...........................................passed
-And user enter password.....................................................passed
-And user confirm password...................................................passed
-Then user could register successfully.......................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify register functionality" name="User couldnot  register without field in required" time="31.67">
-        <system-out><![CDATA[Given user navigate to registration page IN.................................passed
-When user enter first name IN "test"........................................passed
-And user enter last name IN "test"..........................................passed
-And user enter email IN "test@as"...........................................passed
-And user enter phone IN "0105266"...........................................passed
-And user enter password IN "12345678".......................................passed
-And user confirm password IN "12345678".....................................passed
-Then user could register successfully.......................................passed
-Then user could validate phone length.......................................passed
-Then user could validate email correct......................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify register functionality" name="User couldnot  register without field in required 2" time="33.736">
-        <failure message="" type="java.lang.AssertionError"><![CDATA[Given user navigate to registration page IN.................................passed
-When user enter first name IN "test"........................................passed
-And user enter last name IN "test"..........................................passed
-And user enter email IN "test@as"...........................................passed
-And user enter phone IN "0105266"...........................................passed
-And user enter password IN "12345678".......................................passed
-And user confirm password IN "1234567"......................................passed
-Then user could register successfully.......................................passed
-Then user could validate phone length.......................................passed
-Then user could validate email correct......................................passed
-Then user cloudnot regiseter without make confirm password like password....failed
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at StepDefinitions.Register.InvalidRegisterStepDefination.confirmepassword(InvalidRegisterStepDefination.java:141)
-	at ✽.user cloudnot regiseter without make confirm password like password(file:///home/amr/Downloads/hotfix_final-main/src/main/resources/Features/Register%20Senario/SC020_RegisterInvalidData.feature:33)
-]]></failure>
-    </testcase>
-    <testcase classname="verify reset password functionality" name="User could reset his/her password successfully" time="21.068">
-        <system-out><![CDATA[Given user opened login page................................................passed
-And user click on reset password............................................passed
-And user enter his email....................................................passed
-And user click recover......................................................passed
-Then user should receive a link to reset password...........................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify search function" name="Logged User could search for any product" time="24.053">
-        <system-out><![CDATA[Given user login to his account.............................................passed
-And user enter name of product at search box................................passed
-And user click on search....................................................passed
-Then user could see the product displayed...................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="verify category functionality" name="Logged user could select different Categories" time="21.912">
-        <system-out><![CDATA[Given user logged in to select category.....................................passed
-And user hover on category and select subcategory...........................passed
-Then the selected category should be displayed..............................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Logged user could select different tags" name="user can select different tags" time="16.577">
-        <system-out><![CDATA[Given user login............................................................passed
-And user choose specific category...........................................passed
-And user select any tag.....................................................passed
-Then this tag page should be opened successfully............................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Create successful order" name="user can create Order" time="46.788">
-        <system-out><![CDATA[When user choose any category...............................................passed
-And user add any product to cart............................................passed
-And user open cart page.....................................................passed
-And user click on checkout..................................................passed
-And user choose which way he went to checkout...............................passed
-And user add data...........................................................passed
-And user edit billing address...............................................passed
-And user choose payment method..............................................passed
-And user check payment information..........................................passed
-And user agree terms and conditions.........................................passed
-And user confirm order......................................................passed
-Then order should be placed successfully....................................passed
+    <testcase classname="Verify login with phone Functionality" name="User could log in with valid phone and password" time="53.649">
+        <system-out><![CDATA[Given user to login page DE PH..............................................passed
+And user accept cookies DE PH...............................................passed
+When user enter invalid phone DE PH"01062388"...............................passed
+And user enter invalid password DE PH"12345678".............................passed
+And user click on login DE PH...............................................passed
+And user click on profile DE PH.............................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

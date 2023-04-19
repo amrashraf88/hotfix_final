@@ -298,5 +298,33 @@ public class Api {
         Assert.assertEquals(actualMessage, expectedMessage);
 
     }
+    public static void openGmail() {
+        String token1 = given()
+                .baseUri("https://shopapi.witheldokan.com")
+                .basePath("/api/admin/auth")
+                .contentType(ContentType.JSON)
+                .body("{ \"email\": \"admin@el-dokan.com\", \"password\": \"12345678\" }")
+                .post()
+                .then()
+                .statusCode(200)
+
+                .extract()
+
+                .path("data.token");
+
+        System.out.println("Token: " + token1);
+        given()
+                .baseUri("https://shopapi.witheldokan.com")
+                .basePath("/api/admin/configurations/manager/update")
+                .contentType(ContentType.JSON)
+                .header("Authorization", "Bearer " + token1)
+                .body("{ \"configs\": [ { \"id\": 359, \"value\": \"https://api.whatsapp.com/send/?phone=xxxxxx\" }, { \"id\": 181, \"value\": false } ] }")
+                .post()
+                .then()
+                .statusCode(200);
+
+
+    }
+
 
 }

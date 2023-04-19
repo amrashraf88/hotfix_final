@@ -11,5 +11,5 @@ Feature: Verify login Functionality
     Then user could login successfully and redirected to home page GM
     Examples:
     |username|password|
-|Test.test.test@test.test |12345678|
+|test.test@test.com|12345678|
 
